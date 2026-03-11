@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepak Thangaraj | Senior IT Leader | AVP / VP / CTO</title>
+  <meta name="description" content="Deepak Thangaraj — Senior IT Leader with 19+ years in enterprise infrastructure, Microsoft 365, cloud transformation, and digital workplace strategy. Chennai, India." />
+  <meta property="og:title" content="Deepak Thangaraj | Senior IT Leader" />
+  <meta property="og:description" content="19+ years of enterprise IT leadership — Microsoft 365, Cloud, Cybersecurity, Digital Transformation. Open to AVP / VP / CTO / IT Head roles." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─────────────────────────────────────────
+       RESET & BASE
+    ───────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy:      #1B3A6B;
+      --blue:      #2563EB;
+      --blue-mid:  #1D4ED8;
+      --sidebar-bg:#F0F4FF;
+      --border:    #C7D7F5;
+      --text:      #1E293B;
+      --muted:     #64748B;
+      --white:     #FFFFFF;
+      --col-main:  65%;
+      --col-side:  35%;
+      --page-w:    210mm;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5pt;
+      color: var(--text);
+      background: #E8EDF5;
+      line-height: 1.55;
+    }
+
+    /* ─────────────────────────────────────────
+       PAGE SHELL
+    ───────────────────────────────────────── */
+    .page {
+      width: var(--page-w);
+      min-height: 297mm;
+      background: var(--white);
+      margin: 20px auto;
+      box-shadow: 0 4px 40px rgba(27,58,107,0.15);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─────────────────────────────────────────
+       HEADER BAND
+    ───────────────────────────────────────── */
+    .header {
+      background: var(--navy);
+      padding: 22px 28px 18px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      position: relative;
+    }
+
+    .avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: #D1DBF0;
+      border: 3px solid rgba(255,255,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1 {
+      font-size: 24pt;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.3px;
+      line-height: 1.1;
+    }
+
+    .header-text .headline {
+      font-size: 9.5pt;
+      font-weight: 500;
+      color: #93C5FD;
+      margin-top: 4px;
+      letter-spacing: 0.1px;
+    }
+
+    .header-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 18px;
+      margin-top: 10px;
+    }
+
+    .header-contacts span {
+      font-size: 8pt;
+      color: #BFDBFE;
+      font-weight: 400;
+    }
+
+    .header-contacts span strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    /* ─────────────────────────────────────────
+       BODY — TWO COLUMNS
+    ───────────────────────────────────────── */
+    .body {
+      display: flex;
+      flex: 1;
+    }
+
+    /* LEFT / MAIN */
+    .main {
+      width: var(--col-main);
+      padding: 20px 22px 20px 28px;
+      border-right: 1px solid var(--border);
+    }
+
+    /* RIGHT / SIDEBAR */
+    .sidebar {
+      width: var(--col-side);
+      background: var(--sidebar-bg);
+      padding: 20px 20px 20px 18px;
+    }
+
+    /* ─────────────────────────────────────────
+       SECTION HEADERS
+    ───────────────────────────────────────── */
+    .section-title {
+      font-size: 7.8pt;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid var(--blue);
+      margin-bottom: 10px;
+      margin-top: 18px;
+    }
+
+    .section-title:first-child,
+    .sidebar .section-title:first-child {
+      margin-top: 0;
+    }
+
+    /* ─────────────────────────────────────────
+       SUMMARY
+    ───────────────────────────────────────── */
+    .summary p {
+      font-size: 9pt;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    /* ─────────────────────────────────────────
+       EXPERIENCE
+    ───────────────────────────────────────── */
+    .job {
+      margin-bottom: 14px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 1px;
+    }
+
+    .job-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .job-date {
+      font-size: 7.8pt;
+      color: var(--muted);
+      white-space: nowrap;
+      font-weight: 500;
+      padding-top: 1px;
+    }
+
+    .job-company {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    .job-location {
+      font-size: 7.8pt;
+      color: var(--muted);
+      margin-left: 6px;
+    }
+
+    .job-desc {
+      font-size: 8pt;
+      color: var(--muted);
+      font-style: italic;
+      margin: 2px 0 5px;
+      line-height: 1.4;
+    }
+
+    .job ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .job ul li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 3px;
+      font-size: 8.8pt;
+      line-height: 1.55;
+    }
+
+    .job ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-size: 7pt;
+      top: 2px;
+    }
+
+    /* ─────────────────────────────────────────
+       EDUCATION
+    ───────────────────────────────────────── */
+    .edu-item {
+      margin-bottom: 8px;
+    }
+
+    .edu-degree {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .edu-school {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    .edu-meta {
+      font-size: 8pt;
+      color: var(--muted);
+    }
+
+    /* ─────────────────────────────────────────
+       CERTIFICATIONS
+    ───────────────────────────────────────── */
+    .cert-item {
+      margin-bottom: 7px;
+    }
+
+    .cert-name {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .cert-meta {
+      font-size: 8pt;
+      color: var(--muted);
+    }
+
+    .cert-badge {
+      display: inline-block;
+      font-size: 7pt;
+      font-weight: 600;
+      background: #FEF3C7;
+      color: #92400E;
+      border: 1px solid #FDE68A;
+      border-radius: 3px;
+      padding: 1px 5px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    /* ─────────────────────────────────────────
+       SKILLS (SIDEBAR)
+    ───────────────────────────────────────── */
+    .skill-group {
+      margin-bottom: 10px;
+    }
+
+    .skill-category {
+      font-size: 7.8pt;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 2px;
+    }
+
+    .skill-list {
+      font-size: 8pt;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ─────────────────────────────────────────
+       LANGUAGES (SIDEBAR)
+    ───────────────────────────────────────── */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5pt;
+      margin-bottom: 4px;
+    }
+
+    .lang-name {
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .lang-level {
+      color: var(--muted);
+      font-size: 8pt;
+    }
+
+    /* ─────────────────────────────────────────
+       TRAINING (SIDEBAR)
+    ───────────────────────────────────────── */
+    .training-item {
+      margin-bottom: 8px;
+    }
+
+    .training-title {
+      font-size: 8.8pt;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .training-desc {
+      font-size: 7.8pt;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    .footer {
+      background: var(--navy);
+      padding: 7px 28px;
+      font-size: 7pt;
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      letter-spacing: 0.4px;
+    }
+
+    /* ─────────────────────────────────────────
+       PRINT STYLES
+    ───────────────────────────────────────── */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      html, body {
+        background: white;
+        font-size: 9.5pt;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+
+      .header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background: var(--navy) !important;
+      }
+
+      .sidebar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background: var(--sidebar-bg) !important;
+      }
+
+      .footer {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background: var(--navy) !important;
+      }
+
+      .job {
+        page-break-inside: avoid;
+      }
+
+      .section-title {
+        page-break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ══════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════ -->
+  <header class="header">
+    <div class="avatar">DT</div>
+    <div class="header-text">
+      <h1>Deepak Thangaraj</h1>
+      <div class="headline">Senior IT Leader &nbsp;|&nbsp; Microsoft 365 &amp; Cloud Infrastructure &nbsp;|&nbsp; Digital Transformation</div>
+      <div class="header-contacts">
+        <span><strong>Email:</strong> deepak.sam@gmail.com</span>
+        <span><strong>Phone:</strong> +91 87545 35065</span>
+        <span><strong>LinkedIn:</strong> linkedin.com/in/deepaksam020</span>
+        <span><strong>Location:</strong> Chennai, India</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       BODY — TWO COLUMNS
+  ══════════════════════════════════════ -->
+  <div class="body">
+
+    <!-- ┌──────────────────────────────────
+         LEFT / MAIN COLUMN
+    ──────────────────────────────────┐ -->
+    <main class="main">
+
+      <!-- SUMMARY -->
+      <div class="section-title">Professional Summary</div>
+      <div class="summary">
+        <p>
+          Senior IT leader with 19+ years of progressive experience steering enterprise infrastructure, digital workplace transformation, and cloud-first security strategy across complex, multi-location organisations. As Sr. Manager – IT Infrastructure at Future Focus Infotech, directly manages a team of 15 IT professionals and holds ownership of a ₹5 Crore annual IT budget, driving disciplined capex/opex planning and measurable cost accountability. Deep, hands-on expertise across the Microsoft 365 ecosystem — from Exchange Online and Microsoft Entra ID to Intune, Purview, and Zero Trust architecture — underpins a consistent record of building scalable, secure digital environments from the ground up. Recognised for translating board-level business priorities into executed IT roadmaps that improve operational maturity, governance, and workforce productivity at scale.
+        </p>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section-title">Professional Experience</div>
+
+      <!-- JOB 1 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Sr. Manager – IT Infrastructure</span>
+          <span class="job-date">Feb 2022 – Present</span>
+        </div>
+        <div>
+          <span class="job-company">Future Focus Infotech Pvt Ltd</span>
+          <span class="job-location">Chennai, India</span>
+        </div>
+        <div class="job-desc">Leading provider of IT staffing and managed services with nationwide operations across India.</div>
+        <ul>
+          <li>Lead and develop a team of 15 IT professionals spanning infrastructure, security, endpoint management, and service delivery — setting performance standards, mentoring technical growth, and aligning team output to enterprise objectives.</li>
+          <li>Own and govern a ₹5 Crore annual IT budget, driving rigorous vendor negotiations, capex/opex planning, and contract lifecycle management to maximise technology ROI without compromising service resilience.</li>
+          <li>Architect and execute IT infrastructure strategy across 10+ business locations nationwide, ensuring consistent policy enforcement, network reliability, and operational continuity across distributed sites.</li>
+          <li>Built greenfield IT environments for multiple new business units — from network topology and server provisioning to identity management and endpoint onboarding — enabling rapid, compliant operational launch.</li>
+          <li>Deployed and manage 2,000+ endpoints via Microsoft Intune, Entra ID, Conditional Access, and MFA, establishing a unified device compliance posture and reducing unmanaged endpoint risk across the organisation.</li>
+          <li>Designed enterprise DR/BC frameworks incorporating hybrid cloud architecture; implemented Microsoft Purview (DLP, Sensitivity Labels, Information Governance), Zero Trust access controls, and email security controls to protect data across the M365 estate.</li>
+          <li>Developed PowerShell automation scripts for user provisioning, licence reporting, compliance audits, and operational workflows — eliminating repetitive manual overhead and improving IT team throughput.</li>
+        </ul>
+      </div>
+
+      <!-- JOB 2 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">IT Manager</span>
+          <span class="job-date">Mar 2021 – Feb 2022</span>
+        </div>
+        <div>
+          <span class="job-company">Tiger Analytics</span>
+          <span class="job-location">Chennai, India</span>
+        </div>
+        <div class="job-desc">Global analytics consulting firm; role concluded following an organisational restructuring initiative.</div>
+        <ul>
+          <li>Delivered IT cost optimisation through targeted vendor consolidation and contract renegotiation, reducing recurring operational spend while maintaining service quality benchmarks.</li>
+          <li>Led enterprise cloud migration from legacy on-premises infrastructure to Microsoft 365 and Azure — including Exchange Online, SharePoint Online, Teams, and Azure AD — accelerating the firm's cloud-first transition.</li>
+          <li>Executed a global hardware refresh covering 700+ endpoints within agreed budget and timeline, coordinating cross-regional logistics, imaging, and deployment without disruption to active engagements.</li>
+          <li>Established ITIL-aligned incident, problem, and change management processes, providing structured governance around service disruptions and infrastructure change control.</li>
+        </ul>
+      </div>
+
+      <!-- JOB 3 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">IT Manager</span>
+          <span class="job-date">Jan 2017 – Dec 2020</span>
+        </div>
+        <div>
+          <span class="job-company">ESP Engineering</span>
+          <span class="job-location">Chennai, India</span>
+        </div>
+        <div class="job-desc">Engineering consultancy providing technical and IT services across industrial and infrastructure projects.</div>
+        <ul>
+          <li>Architected and managed enterprise IT systems — Windows Server, Active Directory, and SQL Server — supporting 300+ users across engineering workflows, ensuring high availability and data integrity for business-critical operations.</li>
+          <li>Deployed and administered enterprise-grade Wi-Fi, WAN, and network security infrastructure, establishing reliable connectivity across project sites and headquarters.</li>
+          <li>Consolidated the vendor base and rationalised the technology stack, materially reducing operational overhead, licensing complexity, and IT administrative burden across the organisation.</li>
+          <li>Standardised IT service delivery using ITIL-aligned frameworks, improving SLA adherence and introducing structured escalation and problem management practices.</li>
+        </ul>
+      </div>
+
+      <!-- JOB 4 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">IT Manager</span>
+          <span class="job-date">2015 – 2017</span>
+        </div>
+        <div>
+          <span class="job-company">Telliant Systems</span>
+          <span class="job-location">Chennai, India</span>
+        </div>
+        <ul>
+          <li>Directed day-to-day IT operations across infrastructure, endpoint management, and network environments — maintaining system uptime and enforcing security and access control policies.</li>
+          <li>Managed endpoint lifecycle and corporate network administration for the organisation, standardising configurations and implementing patch management disciplines to reduce exposure.</li>
+          <li>Established service desk governance protocols, defining escalation tiers, SLA targets, and knowledge base processes that improved first-contact resolution rates.</li>
+        </ul>
+      </div>
+
+      <!-- JOB 5 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">IT Supervisor</span>
+          <span class="job-date">2014 – 2015</span>
+        </div>
+        <div>
+          <span class="job-company">Netcom Africa (ITO)</span>
+          <span class="job-location">Lagos, Nigeria</span>
+        </div>
+        <ul>
+          <li>Supervised IT operations across international offices, managing infrastructure support and ensuring service continuity for business units operating across African markets.</li>
+          <li>Administered network and server infrastructure in a high-availability environment, coordinating with remote teams to resolve incidents and maintain operational uptime across geographically distributed sites.</li>
+        </ul>
+      </div>
+
+      <!-- JOB 6 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Assistant IT Manager</span>
+          <span class="job-date">2013 – 2014</span>
+        </div>
+        <div>
+          <span class="job-company">QuipServe Private Limited</span>
+          <span class="job-location">Chennai, India</span>
+        </div>
+        <ul>
+          <li>Managed IT support operations covering user systems, server administration, and internal network infrastructure across the organisation.</li>
+          <li>Administered Windows Server environments, Active Directory, and endpoint systems — handling provisioning, access management, and routine maintenance cycles.</li>
+        </ul>
+      </div>
+
+      <!-- JOB 7 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Sr. Team Leader, Technical Support</span>
+          <span class="job-date">2009 – 2013</span>
+        </div>
+        <div>
+          <span class="job-company">Concentrix</span>
+          <span class="job-location">Chennai, India</span>
+        </div>
+        <ul>
+          <li>Led a technical escalation team handling complex enterprise IT support cases, maintaining quality benchmarks and coaching frontline agents through structured knowledge transfer.</li>
+          <li>Acted as the bridge between enterprise helpdesk operations and infrastructure teams — routing systemic issues for root-cause resolution and contributing to service improvement initiatives.</li>
+        </ul>
+      </div>
+
+      <!-- JOB 8 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Escalation Lead, Technical Support</span>
+          <span class="job-date">2006 – 2009</span>
+        </div>
+        <div>
+          <span class="job-company">CSS Corp Pvt Ltd</span>
+          <span class="job-location">Chennai, India</span>
+        </div>
+        <ul>
+          <li>Managed enterprise technical escalations, conducting first-level infrastructure triage and ensuring high-severity incidents were resolved within defined SLA windows.</li>
+          <li>Delivered consistent customer IT support across product and infrastructure lines, building foundational expertise in system diagnostics, network troubleshooting, and enterprise support workflows.</li>
+        </ul>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section-title">Education</div>
+      <div class="edu-item">
+        <div class="edu-degree">Bachelor of Business Administration (BBA)</div>
+        <div class="edu-school">Alagappa University</div>
+        <div class="edu-meta">Aug 2022 – May 2025 &nbsp;·&nbsp; Chennai, India &nbsp;·&nbsp; Distance Education</div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="section-title">Certifications</div>
+      <div class="cert-item">
+        <div class="cert-name">ITIL v4 Foundation</div>
+        <div class="cert-meta">Axelos &nbsp;|&nbsp; PeopleCert</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">
+          CISSP — Certified Information Systems Security Professional
+          <span class="cert-badge">In Progress</span>
+        </div>
+        <div class="cert-meta">ISC²</div>
+      </div>
+
+    </main>
+
+    <!-- ┌──────────────────────────────────
+         RIGHT / SIDEBAR COLUMN
+    ──────────────────────────────────┐ -->
+    <aside class="sidebar">
+
+      <!-- SKILLS -->
+      <div class="section-title">Core Technology Skills</div>
+
+      <div class="skill-group">
+        <div class="skill-category">Cloud &amp; Digital Workplace</div>
+        <div class="skill-list">Microsoft 365 (Exchange Online, SharePoint Online, OneDrive, Teams), Microsoft Entra ID (Azure AD), Identity and Access Management, Single Sign-On &amp; Passwordless Authentication, Multi-Factor Authentication Strategy, Cloud Collaboration Architecture</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Security, Compliance &amp; Data Protection</div>
+        <div class="skill-list">Microsoft Purview (DLP, Sensitivity Labels, Information Governance), Enterprise Data Protection Strategy, Endpoint Security Governance, Email Security Controls, Access Governance &amp; Zero Trust Principles, Encryption Strategy (BitLocker, Data at Rest &amp; In Transit)</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Endpoint &amp; Mobility Management</div>
+        <div class="skill-list">Microsoft Intune, Mobile Device Management (MDM), BYOD Security Architecture, Secure Remote Workforce Enablement, Device Compliance &amp; Conditional Access</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Infrastructure &amp; Enterprise Systems</div>
+        <div class="skill-list">Hybrid Infrastructure Architecture, Windows Server Ecosystems, Enterprise Network &amp; Wi-Fi Architecture, High Availability Design Concepts, Enterprise Application Infrastructure Planning</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Database &amp; Platforms</div>
+        <div class="skill-list">Microsoft SQL Server, Enterprise Data Storage Strategy, Cloud-first Data Architecture</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Automation &amp; Technical Operations</div>
+        <div class="skill-list">PowerShell Automation, IT Operations Workflow Automation, Administrative Scripting &amp; Reporting, System Monitoring &amp; Operational Optimization</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">IT Service Management</div>
+        <div class="skill-list">ITIL-aligned Service Management, Helpdesk Platform Implementation, Incident, Problem &amp; Change Management, Service Delivery Optimization</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Emerging Technology &amp; Innovation</div>
+        <div class="skill-list">AI-driven Platform Architecture, LLM Deployment Ecosystem Exposure, Developer Tooling Environments (Node.js, Python Runtime), SaaS Product Conceptualization &amp; Solution Design</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Leadership &amp; Strategic Skills</div>
+        <div class="skill-list">IT Strategy &amp; Roadmap Development, Enterprise Security Governance, Digital Workplace Transformation Leadership, Technology Risk Management, Vendor Strategy &amp; Technology Evaluation, IT Budgeting &amp; Cost Optimization (₹5 Crore), Large-scale Policy Design, Cross-functional Stakeholder Leadership, Business-aligned Technology Transformation, Operational Excellence &amp; Service Maturity Growth</div>
+      </div>
+
+      <!-- LANGUAGES -->
+      <div class="section-title">Languages</div>
+      <div class="lang-item">
+        <span class="lang-name">Tamil</span>
+        <span class="lang-level">Native</span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name">English</span>
+        <span class="lang-level">Native</span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name">Hindi</span>
+        <span class="lang-level">Advanced</span>
+      </div>
+
+      <!-- TRAINING -->
+      <div class="section-title">Training &amp; Courses</div>
+
+      <div class="training-item">
+        <div class="training-title">Cybersecurity Leadership</div>
+        <div class="training-desc">Principles of technology leadership, enterprise architecture, and strategic IT governance for senior practitioners.</div>
+      </div>
+
+      <div class="training-item">
+        <div class="training-title">IT Governance</div>
+        <div class="training-desc">IT governance frameworks and enterprise application — covering policy design, compliance alignment, and governance maturity models.</div>
+      </div>
+
+    </aside>
+
+  </div><!-- /.body -->
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    Resume — Deepak Thangaraj &nbsp;|&nbsp; deepak.sam@gmail.com &nbsp;|&nbsp; linkedin.com/in/deepaksam020
+  </footer>
+
+</div><!-- /.page -->
+
+<!-- Floating Print Button — hidden in print -->
+<style>
+  #print-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: #2563EB;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  #print-btn:hover { background: #1D4ED8; }
+  @media print { #print-btn { display: none !important; } }
+</style>
+<button id="print-btn" onclick="window.print()">
+  ⬇ Save as PDF
+</button>
+
+</body>
+</html>
